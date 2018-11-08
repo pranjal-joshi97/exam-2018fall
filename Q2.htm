@@ -31,6 +31,24 @@
     </style>
 
     <script type="text/javascript">
+        function textChange(i){
+			let x = document.getElementById("pranjal");
+				if (i == '1'){
+                    document.getElementById("red").style.color = "#FF0000";
+                    document.getElementById("red").style.backgroundColor = "#FFFF00";
+                    document.getElementById("red").style.fontFamily = "Lucida Handwriting";
+                    document.getElementById("red").style.fontSize = "2em"; 
+
+				}
+				else if (i == '2'){
+                    document.getElementById("green").style.color = "green";
+                    document.getElementById("green").style.backgroundColor = "blue";
+                    document.getElementById("green").style.fontFamily = "Arial";
+                    document.getElementById("green").style.fontSize = "2em";
+					
+				}
+			}
+        
 
     </script>
 </head>
@@ -47,14 +65,14 @@
         as necessary.
     </p>
 
-    <table>
+    <table id="pranjal">
         <tr>
-            <td><img src="smiley.jpg" alt="Smiling Face" title="Smile"></td>
-            <td>Web Tech Rocks!</td>
+            <td><img src="smiley.jpg" alt="Smiling Face" title="Smile" id="smile" onclick="textChange('1')"></td>
+            <td id="red">Web Tech Rocks!</td>
         </tr>
         <tr>
-            <td><img src="frown.jpg" alt="Frown Face" title="Sad"></td>
-            <td>Web Tech Sucks!</td>
+            <td><img src="frown.jpg" alt="Frown Face" title="Sad" id="sad" onclick="textChange('2')"></td>
+            <td id="green">Web Tech Sucks!</td>
         </tr>
 
     </table>
